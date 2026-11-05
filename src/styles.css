@@ -25,6 +25,7 @@ button {
   border: 1px solid #284e69; border-radius: 8px;
   background: #fff; color: #17364d; cursor: pointer;
 }
+.autoplay-toggle { margin-top: 10px; }
 button:hover { background: #e4eef5; }
 button:focus-visible { outline: 3px solid #125ca3; outline-offset: 3px; }
 @media (max-width: 360px) {

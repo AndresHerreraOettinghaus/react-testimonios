@@ -28,13 +28,18 @@ export default function App() {
     );
   }
 
+  // Si data.js se edita con la app abierta, Vite conserva index y puede quedar
+  // fuera del nuevo rango. index % total lo mantiene válido y es la misma
+  // posición de la que parten next, prev y random.
+  const posicion = index % total;
+
   return (
     <main className="app">
       <h1>Experiencias de nuestros usuarios</h1>
-      <Testimonial item={testimonios[index]} />
+      <Testimonial item={testimonios[posicion]} />
       <Controls onPrev={prev} onNext={next} onRandom={random} />
       <p className="counter" aria-live="polite">
-        Testimonio {index + 1} de {total}
+        Testimonio {posicion + 1} de {total}
       </p>
     </main>
   );
